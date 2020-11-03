@@ -50,6 +50,9 @@ public class Dateneingabe {
 		
 		System.out.println(g2 + h +i);
 		
+		sc.close();
+		sc2.close();
+		
 		
 
 	}
