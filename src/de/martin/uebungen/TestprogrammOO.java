@@ -17,7 +17,8 @@ public class TestprogrammOO {
 		
 		OOBootcamp bonn = new OOBootcamp(members, trainer);
 		OOBootcamp darmstadt = new OOBootcamp(new String[] {"Alexander", "Monika", "Bert"}, "David");
-		
+		OOBootcamp fundamentals = new OnlineBootcamp(new String[] {"Frank1", "Frank2", "Frank3"}, "André", "Slack");
+		OOBootcamp bonn2 = new OOBootcamp();
 		// +++++++++++++++++++++++++++++++++++++++++++++++>>> SICHERHEIT: <<<===
 		members[1] = "Corona";     // Hier wird die Referenz übergeben...  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> durch clone kann es ferhindert werden !!! Siehe Konstruktor!
 		trainer = "CoronaTrainer"; // Hier geht das Einschleußen nicht !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -54,6 +55,17 @@ public class TestprogrammOO {
 		// man kann toString weglassen: So würde es aber auch funktionieren: // System.out.println(bonn.toString());
 		System.out.println(bonn);
 		System.out.println(darmstadt);
+		
+		System.out.println();
+		System.out.println();
+		fundamentals.plusOneMember("Alexander");
+		fundamentals.plusOneMember("Thomas");
+		fundamentals.plusOneMember("Martin");
+		fundamentals.plusOneMember("Oliver");
+		System.out.println(fundamentals);
+		
+		System.out.println();
+		System.out.println("Anzahl Bootcamps: " + OOBootcamp.anzahl);
 
 	}
 	

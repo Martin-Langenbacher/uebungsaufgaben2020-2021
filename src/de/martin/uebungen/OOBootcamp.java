@@ -127,19 +127,21 @@ public class OOBootcamp {
 	
 	// =========================================================================================
 	public void plusOneMember(String member) {
+		this.members = Arrays.copyOf(this.members, this.members.length +1);
 		// neues Feld mit Länge um eins länger
-		String[] members = new String[this.members.length +1];
+		//String[] members = new String[this.members.length +1];
 		
-		// bisherige Werte rüberschieben
-		for (int i = 0; i < members.length; i++) {
+		// bisherige Werte rüber-schieben
+		/*
+		for (int i = 0; i < this.members.length; i++) {
 			members[i] = this.members[i];
-		}
+		} */
 		
 		// in das hinterste freie Feld den neuen Wert reinschreiben
 		members[members.length -1] = member;
 		
 		// Referenz umlegen
-		this.members = members;
+		//this.members = members;
 	}
 	// =========================================================================================
 
@@ -182,7 +184,7 @@ public class OOBootcamp {
 	public String toString() {
 		System.out.println();
 		System.out.println("==>> Inside the 'toString-Method': ");
-		return Arrays.toString(this.members) + " | " + this.trainer;
+		return "BOOTCAMP\nMembers:\t" + Arrays.toString(this.members) + "\nTrainer:\t" + this.trainer + "\nWeek:\t\t" +this.week + "\nRemote:\t\t" +this.remote;
 		
 		//return "OOBootcamp [members=" + Arrays.toString(members) + ", trainer=" + trainer + ", week=" + week + ", remote=" + remote + "]";
 	}
