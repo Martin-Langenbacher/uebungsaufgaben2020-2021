@@ -28,6 +28,7 @@ public class TestprogrammObst {
 		System.out.println(irgendwas);
 		irgendwas.essen();
 		
+		apfel3.alexanderMartinMethode();
 	}
 
 }
