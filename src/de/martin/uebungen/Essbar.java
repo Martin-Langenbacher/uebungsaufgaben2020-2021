@@ -6,4 +6,5 @@ public interface Essbar {
 	public void essen(); 
 	//public abstract void essen(); // abstract kann weggelassen werden !!!
 
+	
 }
