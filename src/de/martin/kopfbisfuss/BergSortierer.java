@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
+import de.martin.kopfbisfuss.Berg.Level;
+
 public class BergSortierer {
 	LinkedList<Berg> berge = new LinkedList<Berg>();
 	
@@ -44,5 +46,15 @@ public class BergSortierer {
 		Collections.sort(berge, hc);
 		System.out.println();
 		System.out.println("Nach Höhe:\n" + berge);
+		
+		
+		
+		System.out.println("**************************************************************************************************");
+		System.out.println("Enum im Berg: ");	
+		for (Level n : Level.values()) {
+			System.out.println("Durch alle Level: " +n);
+		}
 	}
+	
+	
 }

@@ -1,5 +1,7 @@
 package de.martin.kopfbisfuss;
 
+import de.martin.kopfbisfuss.EnumMartin.Level;
+
 public class Berg {
 	String name;
 	int höhe;
@@ -19,7 +21,6 @@ public class Berg {
 	}
 	
 	
-	
 
 	public void setHöhle1(BergHöhle höhle1) {
 		this.höhle1 = höhle1;
@@ -29,19 +30,21 @@ public class Berg {
 		return name + " " + höhe;
 	}
 	
-	// Inner Klasse
+	
+	// Inner Klasse   *==============================================================================>>>
 	public class BergHöhle {
 		int AnzahlDerBären;
+		// String name = "Name_in_der_inneren_Klasse_BergHöhle";  // sobald dies eingeblendet ist, sobald wird der Name der inneren Klasse verwendet!
 
 		public BergHöhle(int anzahlDerBären) {
 			super(); // könnte weggelassen werden; weil automatisch drin!
 			AnzahlDerBären = anzahlDerBären;
 			
-			System.out.println("Ich bin in der Berghöhle und kann hier auf den Namen zugreifen: " + name);
-			System.out.println("Ich bin in der Berghöhle und kann hier auf den Namen zugreifen: " + Berg.this.name);
+			System.out.println("Ich bin in der Berghöhle und kann hier auf den Namen zugreifen: " + name + " (--> name)");
+			System.out.println("Ich bin in der Berghöhle und kann hier auf den Namen zugreifen: " + Berg.this.name + " (--> Berg.this.name)");
 		}
 	}
-	// Ende Innere Klasse !
+	// Ende Innere Klasse !   *=======================================================================>>>
 	
 	
 	// Inner Klasse
@@ -57,10 +60,16 @@ public class Berg {
 			}
 		}
 		// Ende Innere Klasse !
-	
-	
+		
+		enum Level {
+			LOW,
+			MEDIUM,
+			HIGH,
+			BERG_SPECIAL
+		}
+		
 }
 
 
-// Normale innere Klasse: Ich muss immer einen Berg haben, sonst gibt es keine BerhHöle!
+// Normale innere Klasse: Ich muss immer einen Berg haben, sonst gibt es keine BergHöhle!
 // Jetzt statisch: Eine Innere Klasse hat keinen Bezug auf die äußere Klasse !
